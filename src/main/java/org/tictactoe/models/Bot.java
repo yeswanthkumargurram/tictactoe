@@ -2,7 +2,6 @@ package org.tictactoe.models;
 
 import org.tictactoe.strategies.BotPlayingStrategy;
 import org.tictactoe.strategies.BotPlayingStrategyFactory;
-import org.tictactoe.strategies.EasyBotPlayingStrategy;
 
 public class Bot extends Player{
     private BotDifficultyLevel botDifficultyLevel;
@@ -12,7 +11,7 @@ public class Bot extends Player{
         super(id, name, symbol, playerType);
         this.botDifficultyLevel = botDifficultyLevel;
         this.botPlayingStrategy = BotPlayingStrategyFactory.
-                gtBotPlayingStrategyForDifficultyLevel(botDifficultyLevel);
+                getBotPlayingStrategyForDifficultyLevel(botDifficultyLevel);
     }
 
     @Override
